@@ -8,25 +8,30 @@ from ShahmMusic import BOT_NAME, app
 
 
 @app.on_message(
-    filters.command(["config", "variables"]) | filters.command(["فاراتي","الفارات","الايبيات","كونفنج"],prefixes= ["/", "!","","#"]) & filters.user(config.OWNER_ID)
+    filters.command(["config", "variables"]) | filters.command(["فاراتي","الفارات","الايبيات"],prefixes= ["/", "!","","#"]) & filters.user(config.OWNER_ID)
 )
 async def get_vars(_, message: Message):
     try:
         await app.send_message(
             chat_id=int(config.OWNER_ID),
-            text=f"""<u>**{BOT_NAME} ᴄᴏɴғɪɢ ᴠᴀʀɪᴀʙʟᴇs :**</u>
+            text=f"""<u>**{BOT_NAME} متغيرات التكوين :**</u>
 
 **ايبي ايدي :** `{config.API_ID}`
+
 **ايبي هاش :** `{config.API_HASH}`
 
 **توكن البوت :** `{config.BOT_TOKEN}`
+
 **حد المدة :** `{config.DURATION_LIMIT}`
 
 **ايدي المالك :** `{config.OWNER_ID}`
+
 **سودو يوزر :** `{config.SUDO_USERS}`
 
 **بنك :** `{config.PING_IMG}`
+
 **بدأ :** `{config.START_IMG}`
+
 **كروب الدعم :** `{config.SUPPORT_CHAT}`
 
 **الجلسة :** `{config.SESSION}`""",

@@ -10,7 +10,7 @@ from ShahmMusic.Helpers import gp_buttons, pm_buttons
 from ShahmMusic.Helpers.dossier import *
 
 
-@app.on_message(filters.command(["start"]) | filters.command(["السورس","السورس"],prefixes= ["/", "!","","#"]) & ~filters.forwarded)
+@app.on_message(filters.command(["start"]) | filters.command(["السورس","سورس"],prefixes= ["/", "!","","#"]) & ~filters.forwarded)
 @app.on_edited_message(filters.command(["start"]) & ~filters.forwarded)
 async def Shahm_st(_, message: Message):
     if message.chat.type == ChatType.PRIVATE:

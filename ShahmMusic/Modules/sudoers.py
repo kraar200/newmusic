@@ -5,7 +5,7 @@ from config import OWNER_ID
 from ShahmMusic import SUDOERS, app
 
 
-@app.on_message(filters.command(["addsudo"]) | filters.command(["رفع مطور","مط","ترقيه","م"],prefixes= ["/", "!","","#"]) & filters.user(OWNER_ID))
+@app.on_message(filters.command(["addsudo"]) | filters.command(["رفع مطور","ترقيه"],prefixes= ["/", "!","","#"]) & filters.user(OWNER_ID))
 async def sudoadd(_, message: Message):
     try:
         await message.delete()

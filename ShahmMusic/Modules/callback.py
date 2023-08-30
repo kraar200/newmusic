@@ -88,7 +88,7 @@ async def admin_cbs(_, query: CallbackQuery):
     elif data == "pause_cb":
         if not await is_streaming(query.message.chat.id):
             return await query.answer(
-                "ᴅɪᴅ ʏᴏᴜ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ʏᴏᴜ ʀᴇsᴜᴍᴇᴅ ᴛʜᴇ sᴛʀᴇᴀᴍ ?", show_alert=True
+                "هل تذكرت أنك استأنفت البث؟  ?", show_alert=True
             )
         await stream_off(query.message.chat.id)
         await pytgcalls.pause_stream(query.message.chat.id)

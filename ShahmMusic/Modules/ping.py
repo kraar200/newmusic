@@ -37,8 +37,8 @@ async def ping_Shahm(_, message: Message):
                 [
                     InlineKeyboardButton("الدعم", url=config.SUPPORT_CHAT),
                     InlineKeyboardButton(
-                        "• KIMO ›",
-                        url="https://t.me/devkimo",
+                        "• SOURCE KIMO ›",
+                        url="https://t.me/d8_8q",
                     ),
                 ],
             ]
